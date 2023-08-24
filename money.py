@@ -16,6 +16,7 @@ money = 0
 tm = 0
 file = open('Earnings.txt','w')
 file.write('주의! / 프로그램으로 자동 작성되는 파일입니다. 건들지 말아주세요!\n\n게임을 껐다 키면 기록이 초기화 됩니다.\n\n')
+file.close()
 
 def earn():
     global money
@@ -40,7 +41,7 @@ def get_money():
     
     
 label1 = tkinter.Label(app, text = '0 LAK', font = ('HY견고딕',36))
-label2 = tkinter.Label(app, text = '현재 환율 : 1 LKA : 0.068 WON', font = ('맑은 고딕',24))
+label2 = tkinter.Label(app, text = '현재 환율 : 1 LAK : 0.068 WON', font = ('맑은 고딕',24))
 label3 = tkinter.Label(app, text = '게임을 끄면 현재 얻은돈이 모두 초기화 됩니다.', font = ('맑은 고딕',12))
 
 b1 = tkinter.Button(app, text = '돈벌기', command = earn)
