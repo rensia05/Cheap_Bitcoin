@@ -18,7 +18,7 @@ tm = 0
 def earn():
     global money
     money = money + 2.5
-    label1.config(text = str(money)+' LKA')
+    label1.config(text = str(money)+' LAK')
 
 def upgrade():
     global grade
@@ -38,7 +38,7 @@ def get_money():
     file1.close()
     
     
-label1 = tkinter.Label(app, text = '0 LKA', font = ('HY견고딕',36))
+label1 = tkinter.Label(app, text = '0 LAK', font = ('HY견고딕',36))
 label2 = tkinter.Label(app, text = '현재 환율 : 1 LKA : 0.068 WON', font = ('맑은 고딕',24))
 label3 = tkinter.Label(app, text = '게임을 끄면 현재 얻은돈이 모두 초기화 됩니다.', font = ('맑은 고딕',12))
 
