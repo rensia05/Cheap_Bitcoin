@@ -14,6 +14,8 @@ earned = 0
 grade = 0
 money = 0
 tm = 0
+file = open('Earnings.txt','w')
+file.write('주의! / 프로그램으로 자동 작성되는 파일입니다. 건들지 말아주세요!\n\n게임을 껐다 키면 기록이 초기화 됩니다.\n\n')
 
 def earn():
     global money
@@ -28,14 +30,13 @@ def quit():
 
 def get_money():
     global earned
-    global file1
     global tm
     tm = t.localtime(t.time())
     stm = t.strftime('%Y-%m-%d %I:%M:%S %p', tm)
     earned = money * 0.068
-    file1 = open('Earnings.txt','w')
-    file1.write('주의! / 프로그램으로 자동 작성되는 파일입니다. 건들지 말아주세요!\n'+str(stm)+' / 현재 얻은 돈 : '+str(earned)+' 원\n')
-    file1.close()
+    file = open('Earnings.txt','a')
+    file.write(str(stm)+' / 현재 얻은 돈 : '+str(earned)+' 원\n')
+    file.close()
     
     
 label1 = tkinter.Label(app, text = '0 LAK', font = ('HY견고딕',36))
